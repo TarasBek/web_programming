@@ -1,0 +1,21 @@
+/*** global style settings ***/
+body {
+    background: #fff;
+    font-family: "Roboto", "Arial", sans-serif;
+    
+  }
+.general_container {
+    margin:auto;
+    max-width: 1600px;
+    max-height: 2714px ;
+}
+
+a{
+    text-decoration: none;
+    color: #B8BECD;
+}
+li{
+    display: block;
+}
+
+
