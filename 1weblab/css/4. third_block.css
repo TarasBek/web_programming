@@ -1,0 +1,74 @@
+.third_block {
+	max-width: 1219px;
+	margin: auto;
+	align-items: center;
+	margin-top: 175px;
+}
+
+.third_block_text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.featured_destination_text {
+	font-family: Playfair Display;
+	font-size: 36px;
+	line-height: 50px;
+	width: 481px;
+	height: 50px;
+	margin-bottom: 56px;
+}
+
+.vievall_nav {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 60px;
+	display: flex;
+	align-items: center;
+	color: #FB8F1D;
+}
+
+.photo_colage {
+	justify-content: space-between;
+	display: flex;
+	margin-bottom: 134px;
+}
+
+.photo_colage .photo_collages {
+	width: 261px;
+	height: 332px;
+	border-radius: 8px;
+}
+
+.container_photo {
+	display: flex;
+}
+
+.location_name {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+.rectangular_shape {
+	margin-top: 279px;
+	position: absolute;
+	border-radius: 0px 6px 0px 0px;
+	position: absolute;
+	color: black;
+	background-color: #fff;
+	height: 56px;
+	width: 110px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+.rectangular_shape span{
+	color: grey;
+	size: 17px;
+}

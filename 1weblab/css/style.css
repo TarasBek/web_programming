@@ -1,0 +1,7 @@
+@import "./1. header.css";
+@import "./normalize.min.css";
+@import "./global.css";
+@import "./2. first_block.css";
+@import "./3. second_block.css";
+@import "./4. third_block.css";
+@import "./5. footer.css";
