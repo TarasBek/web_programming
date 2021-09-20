@@ -1,0 +1,28 @@
+/*** global style settings ***/
+body {
+     overflow-y:none;
+    background: #fff;
+    font-family: "Roboto", "Arial", sans-serif;
+   
+  }
+  @media screen and (max-width: 768px) {
+    body {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    :root {
+      font-size: 11px;
+    }
+  }
+
+.container {
+    margin: 0 auto;
+    max-width: 1219px;
+    
+  }
+
+  
+
+  
+  

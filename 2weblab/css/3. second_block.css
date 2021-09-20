@@ -1,10 +1,11 @@
-.second_block {
-	margin-top: 175px;
+.second_block{
+	margin-top: 180px;
+	padding-top: 25px;
+	padding-bottom: 10px;
 	align-items: center;
-	height: 774px;
 	display: flex;
 	justify-content: space-between;
-	background-image: url(/images/silver\ background.svg) !important;
+	background-color:  #f8f8f8;
 }
 
 .second_block_items {
@@ -12,7 +13,6 @@
 	display: flex;
 	align-items: center;
 	margin: auto;
-	justify-content: space-between;
 }
 
 .second_photo {
@@ -75,5 +75,45 @@
 	align-items: center;
 	justify-content: center;
 	border: 0;
+	font-family: Inter;
 }
 
+
+@media screen and (max-width: 1000px){
+	.second_photo{
+      display: none;      
+	}
+	.second_block{
+		text-align: center;
+		padding-bottom: 30px;
+		padding-top: 0;
+	}
+	.button_learnmore{
+		display:table-column;
+	}
+	
+
+}
+@media screen and (max-width: 768px){
+	.second_block{
+		text-align: center;
+	}
+	.second_photo{
+		display: none;
+	}
+	.button_learnmore{
+		display:table-column;
+		align-items: center;
+	}
+	.second_block_text{
+		font-size: 11px;
+		margin: 0;
+	}
+	.title_second {
+		font-size: 30px;
+	}
+	.paragraph_second {
+		font-size: 15px;
+	}
+
+}

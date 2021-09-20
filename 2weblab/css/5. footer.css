@@ -1,5 +1,5 @@
 .footer_hero {
-	background-image: url(/images/footer_photo.svg);
+	background-color: #f8f8f8 ;
 	height: 195px;
 }
 
@@ -29,8 +29,8 @@
 	font-size: 17px;
 	line-height: 28px;
 	color: #848484;
-	margin-top: 31px;
 	margin-bottom: 26px;
+	
 }
 
 .footer_items_connection {
@@ -42,4 +42,11 @@
 
 .footer_items_items {
 	padding-left: 35px;
+	cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+	.footer_text{
+		font-size: 13px;
+	}
+	
 }
