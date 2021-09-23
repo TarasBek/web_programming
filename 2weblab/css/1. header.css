@@ -1,0 +1,145 @@
+/*** header ***/
+.header{
+    max-width: 1219px;
+    margin: auto;
+}
+.header_nav{
+    margin-top: 53px;
+    display: flex;
+    font-family: Inter;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.header_container{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+   
+}
+
+.header_container ul{
+    display: flex;
+    list-style-type:none;
+    
+}
+
+.header_button-item{
+    margin-right:34px ;
+    text-decoration: none;
+    color: #B8BECD;
+}
+.header_button-item:hover{
+    color: tomato;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    
+}
+.header_login{
+    cursor: pointer;
+    border: 1px solid #FB8F1D;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 132px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 60px;
+    align-items: center;
+    color: #FB8F1D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.header_register{
+    width: 132px;
+    height: 44px;
+    background: #FB8F1D;
+    border-radius: 8px;
+    border-color: #FB8F1D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+}
+.header_menu{
+    display: none;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header{ 
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        background-color: white;
+        justify-content: space-between;
+        
+    }
+    
+    .header_nav{
+        display: flex;
+        padding: 10px 10px 10px 10px;
+        margin-top: 0;
+        
+    }
+    .header_menu{
+        display: block;
+    }
+    .header_container{
+        display: block;
+        
+    }
+    .header_register{
+        display: none;
+    }
+    .header_login{
+        display: none;
+    }
+    .header_nav2{
+        background: #CEFFF7;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    clip-path: circle(0 at top left);
+    transition: clip-path 0.9s ease-in;
+    z-index: 11;
+    
+    }
+
+    .header_nav2.open {
+        clip-path: circle(1000px at top);
+      }
+      .header_nav2 ul{
+        flex-direction: column;
+        height: 100%;
+        margin: 0 auto;
+    }
+     .header_button-item{
+        padding-top: 8vh;
+        flex: 1;
+        margin-left: 25%;
+        
+    }
+  }
