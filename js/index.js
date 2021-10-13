@@ -1,14 +1,18 @@
-import { renderItemsDOM, calculateTotal} from "./modules.js";
+import{
+renderItemList,
+addItemToPage,
+calculateTotal
+} from "./card.js";
 
 
-const cardDeck = document.getElementById("card-deck");
-const searchInput = document.getElementById("search-input");
-const searchButton = document.getElementById("search-button");
-const sortCheckbox = document.getElementById("sort");
-const countBtn = document.getElementById("count");
-const countResults = document.getElementById("count_results");
+const cardArea = document.getElementById("card_deck");
+const searchField = document.getElementById("search_field");
+const searchButton = document.getElementById("search_button");
+const ascButton = document.getElementById("asc_sorting_button");
+const descButton = document.getElementById("desc_sorting_button");
+const countButton = document.getElementById("count_price_button");
+const countResult = document.getElementById("count_results");
 const countTotal = document.getElementById("count_total");
-
 
 let pools = [
     {
@@ -45,31 +49,58 @@ let pools = [
 
 let sortedPools = [];
 
+ascButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    let sortedPools = Array.from(pools);
+    if (ascButton.click){
+        sortedPools.sort(
+            function(a,b) {return a.maxAmount - b.maxAmount}
+        );
+    };
+    renderItemList(sortedPools);
+});
+
+descButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    let sortedPools = Array.from(pools);
+    if (descButton.click){
+        sortedPools.sort(
+            function(a,b) {return b.maxAmount - a.maxAmount}
+        );
+    };
+    renderItemList(sortedPools);
+});
+
+countButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    countResult.classList.remove("hidden");
+    const totalAmount = calculateTotal(pools,(pool) => pool.maxAmount);
+    countTotal.innerHTML = totalAmount;
+});
+
 searchButton.addEventListener("click", (event)  => {  
     event.preventDefault(); // запобігає  оновленю  сторінки
     let foundPools = pools.filter(
-        (pools) => pools.poolName.search(searchInput.value) !== -1
+
+        (pools) => pools.poolName.search(searchField.value) !== -1,
+        
     );
-    renderItemsDOM(foundPools);
+    let foundPools1 = pools.filter(
+
+        (pools) => pools.volumeOfWater.find(searchField.value) ,
+        
+    );
+    let foundPools2 = pools.filter(
+
+        (pools) => pools.maxAmount.find(searchField.value) ,
+        
+    );
+    renderItemList(foundPools);
+    renderItemList(foundPools1);
+    renderItemList(foundPools2);
 });
 
-sortCheckbox.addEventListener("change", () => {
-    let sortedPools = Array.from(pools);
-    if (sortCheckbox.checked) {
-      sortedPools.sort(
-        (first, second) => first.maxAmount - second.maxAmount
-      );
-    }
-    renderItemsDOM(sortedPools);
-  });
 
-  countBtn.addEventListener("click", () => {
-    countResults.classList.remove("hidden");
-    const totalAmount = calculateTotal(pools, (pool) => pool.maxAmount);
-    countTotal.innerHTML = totalAmount;
-  });
-  
-  renderItemsDOM(pools);
-  
-  export default pools;
-  export { cardDeck };
+renderItemList(pools);
+export default pools;
+export { cardArea };
