@@ -1,0 +1,27 @@
+.col-md-10 {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 100px;
+}
+.card {
+  width: 250px;
+  margin: 10px;
+}
+
+.count_total {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+.count_results{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+.count_total{
+  font-weight: bold;
+}
