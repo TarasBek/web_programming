@@ -1,13 +1,13 @@
 import{
     addItemToPage,
-    
-    updateItemsOnPage,
+
 
 clearInputs,
 renderItemList,
 getInputValues,
 cardArea,
-calculateTotal
+calculateTotal,
+
 
 } from "./card.js";
 
@@ -48,16 +48,16 @@ const addItem = ({poolName,volumeOfWater, maxAmount}) =>{
     addItemToPage(newItem);
 };
 
-const updateItem = ({ poolName, volumeOfWater, maxAmount }) => {
+ const updateItem = ({ poolName, volumeOfWater, maxAmount }) => {
     for (let pool of pools) {
-        if (pool.id === editLiGlobal) {
-            pool.poolName = poolName
-            pool.volumeOfWater = volumeOfWater
-            pool.maxAmount = maxAmount
-            console.log(pool)
-        }
+        pool.id == editLiGlobal
+        pool.poolName = poolName
+        pool.volumeOfWater = volumeOfWater
+        pool.maxAmount = maxAmount
+        console.log(pool)
     }
-    updateItemsOnPage({ id: editLiGlobal, poolName, volumeOfWater, maxAmount })
+    renderItemList(pools);
+    
 };
 
 
@@ -73,7 +73,9 @@ export const onEditItem = (event) => {
 
     if (!editMode) {
         editButton.innerHTML = "Cancel"
+        console.log("button activated")
         createButton.innerHTML = "Save changes"
+        console.log("button activated")
         nameInput.focus()
         editMode = true
     } else {
@@ -117,7 +119,8 @@ createButton.addEventListener("click", (event) =>{
             volumeOfWater, 
             maxAmount,
         })
-    }else{
+    }
+    if(editMode){
         updateItem({
             poolName,
             volumeOfWater,
