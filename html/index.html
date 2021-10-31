@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 4 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- UUID library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom:0;">
+        <h1>Swimming pools in Lviv</h1>
+        <p>find the most suits variant for you!</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-md-2">
+
+                <p>Menu</p>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a id="asc_sorting_button" class="nav-link" href="#">ASC sorting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="desc_sorting_button" class="nav-link" href="#">DESC sorting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="count_price_button" class="nav-link" href="#">Count price</a>
+                    </li>
+
+                    <form class="form-inline d-flex">
+                        <input class="form-control mr-sm-2 mx-3" type="search" placeholder="enter pool name"
+                            aria-label="Search" id="search_field" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search_button">
+                            Search pool name
+                        </button>
+                    </form>
+
+                    <div class="tools__count-results hidden" id="count_results">
+                        <p class="tools__results-label " id="text_total">Total:</p>
+                        <p class="tools__results-result" id="count_total"></p>
+                    </div>
+                </ul>
+
+                <form class="form-inline d-flex">
+                    <input class="form-control mr-sm-2 mx-3" type="search" placeholder="enter pool name"
+                        aria-label="Search" id="pool_name" />
+                    <input class="form-control mr-sm-2 mx-3" type="search" placeholder="enter volume of water"
+                        aria-label="Search" id="valume_water" />
+                    <input class="form-control mr-sm-2 mx-3" type="search" placeholder="people emount"
+                        aria-label="Search" id="people_emount" />
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="create_button">
+                        Add pool
+                    </button>
+                </form>
+            </div>
+            
+
+            <div class="col-md-10" id="card_deck">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/card.js"></script>
+
+</body>
+
+</html>
